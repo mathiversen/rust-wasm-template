@@ -7,5 +7,5 @@ extern {
 
 #[wasm_bindgen]
 pub fn greet() {
-    alert("Hello, prefetch-rs!");
+    alert("Hello, wasm-bindgen-template!");
 }

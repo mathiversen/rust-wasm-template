@@ -1,6 +1,6 @@
 #!/usr/bin/fish
 
-set WASM_FILE "prefetch_rs_bg.wasm"
+set WASM_FILE "wasm_bindgen_template_bg.wasm"
 set DIR "dist"
 
 mkdir -p $DIR

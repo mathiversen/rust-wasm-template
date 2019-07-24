@@ -8,9 +8,9 @@
 </head>
 <body>
     <script type="module">
-        import { greet, default as init } from './prefetch_rs.js'
+        import { greet, default as init } from './wasm_bindgen_template.js'
         async function run() {
-            await init('./prefetch_rs_bg.wasm')
+            await init('./wasm_bindgen_template_bg.wasm')
             greet('World!')
         }
         run()
