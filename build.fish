@@ -1,6 +1,12 @@
 #!/usr/bin/fish
-mkdir -p dist
-cp www/* dist/
-wasm-pack build --dev --target web --no-typescript --out-dir ./dist
-wasm-strip dist/prefetch_rs_bg.wasm
-wasm-opt -Os dist/prefetch_rs_bg.wasm -o dist/prefetch_rs_bg.wasm
+
+set WASM_FILE "prefetch_rs_bg.wasm"
+set DIR "dist"
+
+mkdir -p $DIR
+cp www/* $DIR/
+wasm-pack build --dev --target web --no-typescript --out-dir ./$DIR
+
+# Optimizations
+wasm-strip $DIR/$WASM_FILE
+wasm-opt -Os $DIR/$WASM_FILE -o $DIR/$WASM_FILE
