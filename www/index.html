@@ -1,25 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document 1</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <main id="main">
-        <svg id="loading" viewBox="25 25 50 50">
-            <circle cx="50" cy="50" r="20"></circle>
-        </svg>
-    </main>
-    <script type="module">
-        import { start, default as init } from './wasm_bindgen_template.js'
-        async function run() {
-            await init('./wasm_bindgen_template_bg.wasm')
-            start()
-        }
-        run()
-    </script>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Title of the page</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+
+	<body>
+		<!-- Show a warning if no JavaScript-->
+		<noscript>
+			You either have javascript disabled or your browser does not support it. Therefore, this site
+			does not work properly.
+		</noscript>
+
+		<!-- Main element, default content is a spinner and will be replaced app has been downloaded -->
+		<main id="main">
+			<svg id="loading" viewBox="25 25 50 50">
+				<circle cx="50" cy="50" r="20"></circle>
+			</svg>
+		</main>
+
+		<!-- All modern browsers -->
+		<script type="module">
+			import { start, default as init } from './wasm_rust_template.js'
+			async function run() {
+				await init('./wasm_rust_template_bg.wasm')
+				start()
+			}
+			run()
+		</script>
+
+		<!-- All browsers that doesn't support JavaScript modules -->
+		<script nomodule>
+			alert('Please upgrade your browser... https://www.mozilla.org/en-US/firefox/new/')
+		</script>
+	</body>
 </html>

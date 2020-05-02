@@ -1,6 +1,8 @@
 body {
-    background: #000000; /* fallback for old browsers */
-    background: linear-gradient(to top, #000000, #434343); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #000000;
+    /* fallback for old browsers */
+    background: linear-gradient(to top, #000000, #434343);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     margin: 0;
 }
 
@@ -20,7 +22,7 @@ body {
 #loading circle {
     fill: none;
     stroke: #00e28b;
-    stroke-width: 2;
+    stroke-width: 4;
     stroke-dasharray: 1, 200;
     stroke-dashoffset: 0;
     stroke-linecap: round;
@@ -38,10 +40,12 @@ body {
         stroke-dasharray: 1, 200;
         stroke-dashoffset: 0;
     }
+
     50% {
         stroke-dasharray: 90, 200;
         stroke-dashoffset: -35px;
     }
+
     100% {
         stroke-dashoffset: -125px;
     }
