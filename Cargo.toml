@@ -1,5 +1,5 @@
 [package]
-name = "wasm-bindgen-template"
+name = "wasm-rust-template"
 version = "0.1.0"
 authors = ["Mathias Iversen <contact@mathiasiversen.com>"]
 edition = "2018"
