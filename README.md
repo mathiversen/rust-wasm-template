@@ -1,6 +1,18 @@
 # Wasm rust template
 
+## Dependencies
+
+- rust
+- Fish shell
+- wasm-pack
+- wasm-strip
+- wasm-opt
+
+## Build
+
+- ./build.fish
+
 ## Links
 
-https://rustwasm.github.io/wasm-bindgen/introduction.html
-https://rustwasm.github.io/docs/wasm-bindgen/
+- [Wasm bindgen](https://rustwasm.github.io/docs/wasm-bindgen/)
+- [Wasm pack](https://github.com/rustwasm/wasm-pack)

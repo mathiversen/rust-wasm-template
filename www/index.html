@@ -11,11 +11,11 @@
 	<body>
 		<!-- Show a warning if no JavaScript-->
 		<noscript>
-			You either have javascript disabled or your browser does not support it. Therefore, this site
-			does not work properly.
+			This site will not work as expected, since you either don't have JavaScript or it's not
+			enabled.
 		</noscript>
 
-		<!-- Main element, default content is a spinner and will be replaced app has been downloaded -->
+		<!-- Main element, default content is a spinner. Content is replaced when the app starts -->
 		<main id="main">
 			<svg id="loading" viewBox="25 25 50 50">
 				<circle cx="50" cy="50" r="20"></circle>
@@ -24,9 +24,9 @@
 
 		<!-- All modern browsers -->
 		<script type="module">
-			import { start, default as init } from './wasm_rust_template.js'
+			import { start, default as init } from 'rust_wasm_template.js'
 			async function run() {
-				await init('./wasm_rust_template_bg.wasm')
+				await init('rust_wasm_template_bg.wasm')
 				start()
 			}
 			run()
