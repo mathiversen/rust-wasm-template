@@ -21,7 +21,7 @@ pub fn greet() {
 pub fn start() {
     set_panic_hook();
 
-    log!("hello from console");
+    log!("hello world");
 
     let window = web_sys::window().expect("no global `window` exists");
     let document = window.document().expect("should have a document on window");
